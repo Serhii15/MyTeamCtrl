@@ -50,7 +50,10 @@ namespace MyTeamCtrlWebAPI
 
             app.UseApplicationInsightsExceptionTelemetry();
 
-            app.UseMvc();
+            app.UseMvc(config =>
+            {
+                //config.MapRoute("MainAPIRoute", "api/{controller}/{action}");
+            });
         }
     }
 }
